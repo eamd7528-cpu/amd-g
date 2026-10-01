@@ -1,0 +1,34 @@
+vhtml
+&lt;!-- الصفحة الأولى: 
+ قائمة الكلمات --\>
+\<!DOCTYPE html\>
+\<html lang="ar"\>
+\<head\>
+\<meta charset="UTF-8"\>
+\<title\>قائمة الكلمات\</title\>
+\</head\>
+\<body\>
+\<h1\>قائمة الكلمات (100 كلمة)\</h1\>
+\<ol\>
+\<li\>Word 1 - الترجمة\</li\>
+\<li\>Word 2 - الترجمة\</li\>
+\<li\>Word 3 - الترجمة\</li\>
+\<!-- أكمل باقي الكلمات هنا --\>
+\</ol\>
+\<a href="quiz1.html"\>التالي: صفحة الحل\</a\>
+\</body\>
+\</html\>
+
+\<!-- الصفحة الثانية: صفحة الحل (اختيار من متعدد) --\>
+\<!DOCTYPE html\>
+\<html lang="ar"\>
+\<head\>
+\<meta charset="UTF-8"\>
+\<title\>حل الكلمات 1\</title\>
+\</head\>
+\<body\>
+\<h1\>تمارين الكلمات - الجزء الأول\</h1\>
+\<form\>
+\<p\>1. ما معنى الكلمة الأولى؟\</p\>
+\<input type="radio" name="q1" value="a"\> خيار أ\<br\>
+\<input type="radio" name="q1" …
