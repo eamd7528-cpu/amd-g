@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة حل الكلمات</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section>
+            <h1>لعبة حل الكلمات</h1>
+            <div id="game-container">
+                <div id="quiz-panel" class="quiz-panel">
+                    <p id="question-text">جاري تحميل السؤال...</p>
+                    <div id="quiz-options"></div>
+                    <input type="text" id="user-answer" placeholder="اكتب الحل هنا...">
+                    <button class="quiz-submit" onclick="checkAnswer()">تحقق</button>
+                    <p id="result-message"></p>
+                </div>
+            </div>
+            <a href="index.html" class="nav-button">العودة للرئيسية</a>
+        </section>
+    </main>
+    <script src="app.js"></script>
+    <script>
+        window.onload = function() {
+            startQuiz();
+        };
+    </script>
+</body>
+</html>

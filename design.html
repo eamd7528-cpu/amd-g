@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ef">
+  <title>التصميم | كَلِمة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="design">
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="كلمة، الصفحة الرئيسية"><span class="wordmark-dot"></span>كَلِمة</a>
+    <nav class="main-nav" aria-label="التنقل الرئيسي">
+      <a class="nav-link" href="index.html">قائمة الكلمات</a>
+      <a class="nav-link" href="exercises.html">التمارين</a>
+      <a class="nav-link is-active" href="design.html" aria-current="page">التصميم</a>
+    </nav>
+    <span class="header-note">إنجليزي <span aria-hidden="true">/</span> عربي</span>
+  </header>
+
+  <main class="page-shell design-shell">
+    <section class="page-intro">
+      <div>
+        <p class="eyebrow">تفضيلات العرض <span>03 / 03</span></p>
+        <h1>رتّب مساحتك<br><span class="title-accent">على ذوقك.</span></h1>
+      </div>
+      <p class="intro-copy">غيّر ألوان الواجهة وحجم النص. اختياراتك تُحفظ على هذا الجهاز.</p>
+    </section>
+
+    <section class="design-settings" aria-label="إعدادات التصميم">
+      <div class="setting-block">
+        <div class="setting-heading">
+          <div><p class="eyebrow">01</p><h2>لوحة الألوان</h2></div>
+          <span class="setting-caption">اختر طابعًا للصفحات</span>
+        </div>
+        <div class="theme-options" role="group" aria-label="لوحة الألوان">
+          <button class="theme-option" type="button" data-theme-choice="paper" aria-pressed="false">
+            <span class="theme-swatch swatch-paper" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>ورق وحبر</span>
+          </button>
+          <button class="theme-option" type="button" data-theme-choice="lagoon" aria-pressed="false">
+            <span class="theme-swatch swatch-lagoon" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>موج وليمون</span>
+          </button>
+          <button class="theme-option" type="button" data-theme-choice="terracotta" aria-pressed="false">
+            <span class="theme-swatch swatch-terracotta" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>طين وزيتون</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="setting-block text-setting">
+        <div class="setting-heading">
+          <div><p class="eyebrow">02</p><h2>حجم النص</h2></div>
+          <output id="text-size-value" for="text-size">16 بكسل</output>
+        </div>
+        <label class="range-label" for="text-size">حجم النص في القوائم والتمارين</label>
+        <input id="text-size" class="size-range" type="range" min="15" max="20" step="1" value="16">
+        <div class="range-ends"><span>أصغر</span><span>أكبر</span></div>
+      </div>
+
+      <div class="preview-strip" aria-live="polite">
+        <span class="preview-number">01</span>
+        <span class="preview-word" lang="en" dir="ltr">Good morning</span>
+        <span class="preview-translation">صباح الخير</span>
+        <span class="preview-caption">معاينة مباشرة</span>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <span id="settings-status" role="status">التغييرات تُطبّق على جميع الصفحات.</span>
+      <a class="text-link" href="index.html">العودة إلى الكلمات <span aria-hidden="true">←</span></a>
+    </footer>
+  </main>
+</body>
+</html>
+<div id="typing-effect"></div>
+
+<script>
+    const codeText = "هنا هيتحط الكود اللي عايز تعرضه";
+    let index = 0;
+
+    function typeEffect() {
+        if (index < codeText.length) {
+            document.getElementById("typing-effect").textContent += codeText.charAt(index);
+            index++;
+            setTimeout(typeEffect, 50);
+        }
+    }
+    window.onload = typeEffect;
+</script>
